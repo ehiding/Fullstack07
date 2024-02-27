@@ -1,0 +1,62 @@
+.section-1 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1500px;
+  height: 500px;
+  background-color: rgb(241, 241, 238);
+}
+
+.section-2 {
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.hr-2 {
+  width: 43px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(52, 52, 254);
+}
+
+blockquote {
+  font-style: italic;
+  color: grey;
+  position: relative;
+  left: 50px;
+  bottom: 90px;
+}
+
+img {
+  width: 65px;
+}
+
+.people {
+  position: relative;
+  bottom: 90px;
+  left: 90px;
+}
+
+.comment-1 {
+  height: 150px;
+  margin: 0px 50px 50px 50px;
+}
+
+.comment-2 {
+  height: 150px;
+  margin: 0px 50px 50px 50px;
+  position: relative;
+  left: 450px;
+  bottom: 400px;
+}
+
+.comment-3 {
+  height: 150px;
+  margin: 0px 50px 50px 50px;
+  position: relative;
+  left: 900px;
+  bottom: 800px;
+}
