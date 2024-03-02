@@ -1,0 +1,50 @@
+form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  font-family: BebasNeue;
+  font-size: 25px;
+  color: #3a2617;
+}
+
+h2 {
+  font-family: Alfa Slab One, Impact Charcoal;
+  font-size: 50px;
+  color: #3a2617;
+  margin-top: 37px;
+  margin-bottom: 5px;
+}
+
+input {
+  font-family: BebasNeue;
+  font-size: 20px;
+  color: #3a2617;
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 300px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+::placeholder {
+  color: #3a2617;
+  font-family: Bebas Neue;
+  font-size: large;
+}
+
+button {
+  font-family: Alfa Slab One;
+  color: #fff;
+  background-color: #b0332b;
+  font-size: 20px;
+  width: 322px;
+  height: 57px;
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
