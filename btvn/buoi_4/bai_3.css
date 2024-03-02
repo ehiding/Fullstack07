@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.button-top {
+  padding-left: 300px;
+}
+
+.button-1 {
+  width: 100px;
+  height: 40px;
+  background-color: #29388e;
+}
+
+.a-button-1 {
+  color: white;
+  text-decoration: none;
+}
+
+.a-button-2 {
+  color: white;
+  text-decoration: none;
+}
+
+.a-button-3 {
+  color: white;
+  text-decoration: none;
+}
+
+.a-button-4 {
+  color: white;
+  text-decoration: none;
+}
+
+.a-button-5 {
+  color: white;
+  text-decoration: none;
+}
+.button-2 {
+  width: 100px;
+  height: 40px;
+  background-color: #29388e;
+  color: white;
+}
+
+.button-3 {
+  width: 150px;
+  height: 40px;
+  background-color: #29388e;
+  color: white;
+}
+
+.button-4 {
+  width: 100px;
+  height: 40px;
+  background-color: #29388e;
+  color: white;
+}
+
+.button-5 {
+  width: 100px;
+  height: 40px;
+  background-color: #29388e;
+  color: white;
+}
+
+#wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+ul.products {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul.products li {
+  margin-top: 50px;
+  flex-basis: 20%;
+}
+
+.product-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-thumb {
+  display: block;
+}
+
+.add-to-cart {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 150px;
+  height: 80px;
+  color: #fff;
+  padding: 8px 0;
+  position: absolute;
+  bottom: -100px;
+}
+.button-img button {
+  width: 40px;
+  height: 35px;
+  margin-left: 5px;
+  background-color: #29388e;
+}
+
+.button-add {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  background-color: #29388e;
+  color: #fff;
+}
+
+ul.products li:hover .add-to-cart {
+  bottom: 0px;
+}
+
+.product-top {
+  padding-left: 30px;
+}
+
+.product-info {
+  margin-top: 60px;
+}
+
+.star-1 {
+  padding-left: 50px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  padding-left: 75px;
+}

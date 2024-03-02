@@ -1,0 +1,58 @@
+form {
+  background-color: rgb(19, 36, 78);
+  width: 700px;
+  height: 180px;
+}
+
+.div-main {
+  position: fixed;
+  width: 550px;
+}
+
+.span-text-1 {
+  color: #ffa500;
+  margin-left: 40px;
+  font-size: 27px;
+}
+
+.span-text-2 {
+  color: #fff;
+  font-size: 27px;
+}
+
+.p-text-2 {
+  margin-left: 40px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.p-text-3 {
+  margin-left: 40px;
+  color: #fff;
+  font-size: 14px;
+}
+
+input {
+  margin-left: 40px;
+  width: 40%;
+  height: 30px;
+  border-radius: 4px;
+}
+
+input:focus {
+  color: #ffa500;
+  background-color: #ddd;
+}
+
+button {
+  width: 36%;
+  height: 36px;
+  color: black;
+  background-color: rgb(227, 227, 30);
+  border-radius: 4px;
+}
+
+button:focus {
+  color: white;
+  background-color: #ffa500;
+}
