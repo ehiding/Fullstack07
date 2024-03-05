@@ -14,6 +14,7 @@ h1 {
 
 p {
   font-size: 1.6rem;
+  font-family: "Lato";
 }
 
 p span {
@@ -21,10 +22,228 @@ p span {
 }
 
 form {
-  margin: 3rem 0 0 0;
+  margin: rem 0 0 0;
 }
 
 .info {
   display: flex;
+  position: relative;
+  text-align: center;
   margin-top: 20px;
+}
+
+.info > * {
+  display: block;
+}
+
+.fa-user {
+  width: 40px;
+  height: 27.5px;
+  background: #dddddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+input {
+  position: relative;
+  width: 450px;
+  height: 36px;
+  left: 40px;
+  padding: 0 0 0 20px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+input:hover ~ .fa-user {
+  background: #333333;
+}
+
+.note {
+  width: 140px;
+  height: 40px;
+  background: rgb(0, 0, 0, 0.9);
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: -52px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+.note::before {
+  content: "";
+  background: rgb(0, 0, 0, 0.9);
+  position: absolute;
+  border-top: 7px solid transparent;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  left: 30px;
+  top: 40px;
+}
+
+input:hover ~ .note {
+  display: flex;
+}
+
+.fa-star {
+  width: 40px;
+  height: 29px;
+  color: #dddddd;
+  font-size: 10px;
+  display: flex;
+  position: absolute;
+  padding: 10px 0 0 0;
+  left: 475px;
+  top: 5px;
+}
+
+.fa-xmark {
+  width: 40px;
+  height: 29px;
+  color: #dddddd;
+  font-size: 10px;
+  position: absolute;
+  padding: 10px 0 0 0;
+  left: 475px;
+  top: 5px;
+  display: none;
+  visibility: hidden;
+}
+
+input:hover ~ .fa-star {
+  display: none;
+}
+
+input:hover ~ .fa-xmark {
+  display: flex;
+  left: 492px;
+  color: black;
+  visibility: visible;
+}
+
+.fa-envelope {
+  width: 40px;
+  height: 27.5px;
+  background: #dddddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+input:hover ~ .fa-envelope {
+  background: #333333;
+}
+
+.fa-mobile-screen-button {
+  width: 40px;
+  height: 27.5px;
+  background: #dddddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+input:hover ~ .fa-mobile-screen-button {
+  background: #333333;
+}
+
+select {
+  position: relative;
+  width: 473px;
+  height: 40px;
+  border: 1px solid #ddd;
+  left: 40px;
+  outline: none;
+  padding: 0 0 0 20px;
+}
+
+.fa-book {
+  width: 40px;
+  height: 30px;
+  background: #dddddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+select:hover ~ .note {
+  display: flex;
+}
+
+select:hover ~ .fa-book {
+  background: #333333;
+}
+
+.fa-message {
+  width: 40px;
+  height: 28px;
+  background: #dddddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+textarea {
+  width: 468px;
+  height: 200px;
+  position: relative;
+  border: 1px solid #ddd;
+  left: 40px;
+  outline: none;
+}
+
+textarea:hover ~ .fa-message {
+  background: #333333;
+}
+
+textarea:hover ~ .note {
+  display: flex;
+}
+
+::placeholder {
+  padding-left: 20px;
+  color: #ddd;
+}
+
+textarea:hover ~ .fa-star {
+  display: none;
+}
+
+textarea:hover ~ .fa-xmark {
+  display: flex;
+  left: 492px;
+  color: black;
+  visibility: visible;
+}
+.btn {
+  padding-top: 30px;
+  width: 540px;
+}
+button {
+  width: 120px;
+  height: 30px;
+  background: rgb(255, 61, 61);
+  font-size: 17px;
+  border: 0;
+  color: white;
+  float: right;
 }
