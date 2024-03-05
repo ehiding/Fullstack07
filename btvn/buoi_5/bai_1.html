@@ -19,6 +19,8 @@
   </head>
   <body>
     <main>
+      <h1 align="center">Bài Tập 1</h1>
+      <hr />
       <h1>Hey there</h1>
       <div class="text-1">
         <p>
@@ -29,10 +31,57 @@
       <form action="#">
         <div class="info">
           <input type="text" name="name" placeholder="Your name" />
-          <div class="notify"><span>Enter your name</span></div>
+          <div class="note"><span>Enter your name</span></div>
           <i class="fa-solid fa-user"></i>
-          <i class="fa-sharp fa-solid fa-star"> </i>
+          <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="info">
+          <input type="email" name="email" placeholder="your@domain.com" />
+          <div class="note"><span>Enter your email</span></div>
+          <i class="fa-sharp fa-solid fa-envelope"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="info">
+          <input type="tel" name="tel" placeholder="+44 00 123" />
+          <div class="note"><span>Enter your tel</span></div>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="info">
+          <select name="subject">
+            <option value="subject-0">Subject</option>
+            <option value="subject-1">...1</option>
+            <option value="subject-2">...2</option>
+            <option value="subject-3">...3</option>
+          </select>
+          <div class="note"><span>Choose subject</span></div>
+          <i class="fa-solid fa-book"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="info">
+          <textarea placeholder="Message"></textarea>
+          <div class="note"><span>Leave message</span></div>
+          <i class="fa-solid fa-message"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="btn">
+          <label>
+            <label
+              ><input
+                id="send"
+                type="checkbox"
+                style="width: 20px; height: 20px; position: inherit"
+            /></label>
+            <label
+              ><span style="font-family: Lato; color: #ddd; font-size: 16px"
+                >Send me a copy of this message</span
+              ></label
+            >
+          </label>
+          <button type="submit">SEND</button>
         </div>
       </form>
     </main>
