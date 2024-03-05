@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lobster;
+  src: url(../font/LobsterTwo-Regular.ttf);
+}
+html {
+  font-family: Lato;
+}
+.wrapper {
+  padding-left: 50px;
+}
+h2 {
+  font-size: 40px;
+  font-family: Lobster;
+  font-style: italic;
+  padding: 15px 0 20px 0;
+}
+.info {
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin-top: 25px;
+}
+.info > * {
+  display: block;
+}
+.notify {
+  width: 140px;
+  height: 40px;
+  background: rgb(0, 0, 0, 0.9);
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: -60px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+.notify::before {
+  content: "";
+  background: rgb(0, 0, 0, 0.9);
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  left: 30px;
+  top: 40px;
+}
+
+.icon-before {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+}
+input {
+  position: relative;
+  width: 500px;
+  height: 40px;
+  border: 1px solid #ddd;
+  left: 40px;
+  outline: none;
+}
+select {
+  position: relative;
+  width: 500px;
+  height: 40px;
+  border: 1px solid #ddd;
+  left: 40px;
+  outline: none;
+}
+textarea {
+  width: 500px;
+  position: relative;
+  border: 1px solid #ddd;
+  left: 40px;
+  outline: none;
+}
+.icon-after {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-size: 10px;
+  color: #ddd;
+  left: 15px;
+}
+.icon-2 {
+  display: none;
+}
+::placeholder {
+  padding-left: 20px;
+  color: #ddd;
+}
+input:hover ~ .icon-before {
+  background: #000;
+}
+input:hover {
+  border: 1px solid black;
+}
+input:focus {
+  border: 1px solid black;
+}
+input:focus ~ .icon-before {
+  background: #000;
+}
+input:focus ~ .notify {
+  display: flex;
+}
+input:focus ~ .icon-2 {
+  display: flex;
+}
+input:focus ~ .icon-1 {
+  display: none;
+}
+textarea:hover ~ .icon-before {
+  background: #000;
+}
+textarea:hover {
+  border: 1px solid black;
+}
+textarea:focus {
+  border: 1px solid black;
+}
+textarea:focus ~ .icon-before {
+  background: #000;
+}
+textarea:focus ~ .notify {
+  display: flex;
+}
+textarea:focus ~ .icon-2 {
+  display: flex;
+}
+textarea:focus ~ .icon-1 {
+  display: none;
+}
+select:hover ~ .icon-before {
+  background: #000;
+}
+select:hover {
+  border: 1px solid black;
+}
+select:focus {
+  border: 1px solid black;
+}
+select:focus ~ .icon-before {
+  background: #000;
+}
+select:focus ~ .notify {
+  display: flex;
+}
+.btn {
+  padding-top: 30px;
+  width: 540px;
+}
+button {
+  width: 120px;
+  height: 30px;
+  background: rgb(255, 61, 61);
+  font-size: 17px;
+  border: 0;
+  color: white;
+  float: right;
+}

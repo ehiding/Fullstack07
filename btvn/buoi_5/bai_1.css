@@ -1,0 +1,30 @@
+main {
+  padding: 0 0 0 30px;
+  width: 500px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-family: "Lobster";
+  font-size: 4.4rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+p span {
+  color: red;
+}
+
+form {
+  margin: 3rem 0 0 0;
+}
+
+.info {
+  display: flex;
+  margin-top: 20px;
+}

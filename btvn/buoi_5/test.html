@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+    <link rel="stylesheet" href="css/bai1.css" />
+    <script
+      src="https://kit.fontawesome.com/b3f370a139.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Hey there</h2>
+      <p>
+        <span style="color: red">We'd like to hear form you.</span> Send us your
+        message or just say hi with our <br />
+        contact form or directly via phone, we love to chat.
+      </p>
+      <form>
+        <div class="info">
+          <input type="text" name="name" placeholder="Your name" />
+          <div class="notify"><span>Enter your name</span></div>
+          <span class="icon-before"><i class="fa-solid fa-user"></i></span>
+          <span class="icon-after icon-1"
+            ><i class="fa-sharp fa-solid fa-star"></i
+          ></span>
+          <span class="icon-after icon-2"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="info">
+          <input type="email" name="email" placeholder="your@domain.com" />
+          <div class="notify"><span>Enter your email</span></div>
+          <span class="icon-before"
+            ><i class="fa-sharp fa-solid fa-envelope"></i
+          ></span>
+          <span class="icon-after icon-1"
+            ><i class="fa-sharp fa-solid fa-star"></i
+          ></span>
+          <span class="icon-after icon-2"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="info">
+          <input type="tel" name="tel" placeholder="+44 00 123" />
+          <div class="notify"><span>Enter your tel</span></div>
+          <span class="icon-before"
+            ><i class="fa-solid fa-mobile-screen-button"></i
+          ></span>
+          <span class="icon-after icon-2"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="info">
+          <select name="subject">
+            <option value="subject-0">Subject</option>
+            <option value="subject-1">Subject 1</option>
+            <option value="subject-2">Subject 2</option>
+            <option value="subject-3">Subject 3</option>
+          </select>
+          <div class="notify"><span>Choose subject</span></div>
+          <span class="icon-before"><i class="fa-solid fa-book"></i></span>
+          <span class="icon-after icon-2"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="info">
+          <textarea
+            name="message"
+            cols="65"
+            rows="15"
+            placeholder="Message"
+          ></textarea>
+          <div class="notify"><span>Leave message</span></div>
+          <span
+            class="icon-before"
+            style="height: 227px; justify-content: flex-start"
+            ><i
+              class="fa-sharp fa-solid fa-envelope"
+              style="padding-top: 15px"
+            ></i
+          ></span>
+          <span
+            class="icon-after icon-1"
+            style="justify-content: flex-start; top: 20px"
+            ><i class="fa-sharp fa-solid fa-star"></i
+          ></span>
+          <span
+            class="icon-after icon-2"
+            style="justify-content: flex-start; top: 20px"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="btn">
+          <label>
+            <label
+              ><input
+                id="send"
+                type="checkbox"
+                style="width: 20px; height: 20px; position: inherit"
+            /></label>
+            <label for="send">Send me a copy of this message</label>
+          </label>
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
