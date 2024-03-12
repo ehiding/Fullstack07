@@ -1,0 +1,32 @@
+.section-location {
+  display: flex;
+  height: 80px;
+  border: 1px solid red;
+}
+
+.section-location-info {
+  text-align: center;
+  padding: 10px 15px;
+  border: 1px solid red;
+  margin: 20px 20px 0 0;
+  border-radius: 30px 30px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 10px;
+}
+
+.section-location-info:hover {
+  background-color: #ae7b37;
+}
+
+.section-location-info:hover a,
+p {
+  color: white;
+}
