@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Manrope;
+}
+
+body {
+  background: url("https://vietnamarch.com.vn/wp-content/uploads/2020/07/thiet-ke-background-van-phong-hien-dai1-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+menu {
+  max-width: 1400px;
+  /* border: 1px solid red; */
+  padding: 20px 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-logo {
+  font-size: 30px;
+  font-weight: 900;
+  color: #404959;
+}
+
+menu .menu-title .menu-title-list {
+  /* border: 1px solid red; */
+  display: flex;
+  list-style: none;
+}
+
+menu .menu-title ul li {
+  padding-left: 40px;
+}
+
+/* .menu-title {
+  position: relative;
+} */
+
+.document:hover main {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-title-list li:hover .document-a {
+  opacity: 0.7;
+  display: block;
+}
+
+main {
+  height: 370px;
+  position: absolute;
+  top: 100%;
+  left: 3%;
+  width: 93.5%;
+  background: rgb(255, 255, 255);
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s linear;
+}
+
+main ul {
+  list-style: none;
+  border: 0.1px solid rgb(255, 255, 255);
+}
+
+main li {
+  margin-top: 10px;
+}
+
+.container-left {
+  width: 37%;
+  float: left;
+  margin: 0px 0px;
+}
+
+.container-left::after {
+  top: 30px;
+  content: "";
+  position: absolute;
+  height: 315px;
+  width: 2px;
+  background-color: #cacacaf2;
+  left: 470px;
+}
+
+.elements {
+  width: 63%;
+  /* border: 1px solid red; */
+}
+
+.list-left {
+  width: 35%;
+  float: left;
+}
+
+.list-middle {
+  width: 35%;
+  float: left;
+}
+
+.top-list-left {
+  width: 50%;
+  float: left;
+}
+
+.bottom-list-left {
+  width: 50%;
+  float: left;
+}
+
+.style {
+  padding-top: 30px;
+}
+
+.heading {
+  padding: 20px 40px;
+  margin-bottom: -20px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #404959;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 700;
+  color: #404959;
+}

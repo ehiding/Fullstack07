@@ -1,0 +1,9 @@
+.quantity {
+  height: 30px;
+  width: 100px;
+  border: 1px solid rgb(173, 168, 168);
+  border-radius: 99px;
+  text-align: center;
+  padding: 8px;
+  /* justify-content: space-between; */
+}
