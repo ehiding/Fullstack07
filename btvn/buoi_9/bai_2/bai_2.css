@@ -135,8 +135,10 @@ p {
 }
 
 .btn {
-  /* padding-top: 60px; */
-  padding: 60px 15px 0 15px;
+  /* border: 1px solid red; */
+  width: 125px;
+  margin-top: 60px;
+  margin-left: 15px;
   opacity: 0;
   visibility: hidden;
 }
