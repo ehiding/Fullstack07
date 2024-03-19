@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  transition: 0.5s linear;
 }
 
 html,
@@ -15,83 +16,156 @@ body {
 
 .wrapper {
   display: grid;
-  grid-gap: 16px;
-  padding: 16px;
-  max-width: 1000px;
+  grid-gap: 35px;
+  padding: 25px;
+  max-width: 1200px;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .team {
   position: relative;
-  padding: 16px;
-  width: 90%;
+  /* padding: 16px; */
+  width: 100%;
   height: 250px;
-  border: 1px solid red;
-  background: url("https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg");
+  border: 2px solid #ebebef;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .team::before {
   content: "";
+  display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100%;
-  height: 110%;
-  background-size: cover;
-  background-position: 0 0;
-  transition: all 0.5s ease;
+  height: 100%;
   pointer-events: none;
+  transition: all 0.9s ease;
+  background-color: #a97c6f;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .team::after {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   transition: all 0.9s ease;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9),
-    rgba(255, 255, 255, 0.3)
-  );
-  /* transform: translateY(-20%); */
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg");
+  opacity: 0;
+  visibility: hidden;
 }
 
 .info {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  /* align-items: center; */
+  width: 90%;
   padding: 16px;
   transition: transform 0.5s ease;
   z-index: 1;
 }
 
-.team::after {
-  transform: translateY(0);
-}
-
 .info {
-  transform: translateY(calc(180% - 64px));
+  transform: translateY(calc(180% - 180%));
 }
 
-.team:hover::before {
-  transform: translateY(-4%);
+.info-box p {
+  color: #8b8b8e;
 }
 
 .team:hover:after {
   transform: translateY(-50%);
+  opacity: 0.5;
+  visibility: visible;
 }
 
-.team:hover .info {
-  transform: translateY(0);
+.team:hover::before {
+  transform: translateY(-50%);
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.team:hover .info-box {
+  transform: translateY(-24%);
+  border: 1px solid #bd9082;
+}
+
+.team:hover .info-box h2 {
+  color: white;
+}
+
+.team:hover .info-box p {
+  color: white;
+}
+
+.team:hover .info-box .btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team:hover .info .fa-scale-balanced {
+  opacity: 0;
+  visibility: visible;
+}
+
+.fa-scale-balanced {
+  color: #a38685;
+  font-size: 50px;
+  padding: 0 15px;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding: 15px;
+}
+
+p {
+  padding: 0 15px;
+}
+
+.btn {
+  /* padding-top: 60px; */
+  padding: 60px 15px 0 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: 550;
+  padding-right: 5px;
+}
+
+.btn:hover .fa-arrow-right {
+  color: black;
+  background: white;
+}
+
+.fa-arrow-right {
+  width: 12px;
+  height: 17px;
+  border: 0.1px solid rgb(255, 255, 255);
+  padding: 5px 9px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  background-color: #a97c6f;
+  cursor: pointer;
+}
+
+.info-box {
+  width: 100%;
+  height: 225px;
 }
