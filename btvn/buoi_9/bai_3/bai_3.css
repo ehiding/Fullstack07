@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 1400px;
+  height: 900px;
+  /* border: 1.2px solid red; */
+  /* justify-content: center; */
+}
+
+header {
+  /* border: 1.2px solid rgb(0, 0, 0); */
+  width: 100%;
+  text-align: center;
+  /* justify-content: center; */
+}
+
+h2 {
+  font-size: 37px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+nav {
+  display: grid;
+  width: 80%;
+  /* border: 1px solid red; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: 47%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+.input-group input {
+  width: 500px;
+  height: 60px;
+  font-size: 16px;
+  padding: 0 20px;
+  /* background: transparent; */
+  /* border: 1.2px solid rgb(191, 0, 0); */
+  border-radius: 5px;
+}
+
+select {
+  width: 542px;
+  height: 62px;
+  font-size: 16px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: 12px;
+  font-size: 14px;
+}
+
+.label-message {
+  width: 100%;
+  position: relative;
+  left: 2px;
+}
+
+.label-message span {
+  position: absolute;
+  top: 15%;
+  left: 157px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+textarea {
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+
+.label-message textarea:focus ~ span,
+.label-message textarea:valid ~ span {
+  top: 12px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 15px;
+  width: 12%;
+  height: 50px;
+  border: none;
+  border-radius: 99px;
+  font-size: medium;
+  font-weight: 600;
+  color: white;
+  background-color: #4d77d9;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: solid 2px #cec0f1;
+}
