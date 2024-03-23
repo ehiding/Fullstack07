@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border-bottom-right-radius: 100%;
+  background: white;
+  color: #05a8f5;
+}
+
+nav .icon label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 27px;
+}
+
+.icon-arrow-right {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav .icon label i {
+  transition: transform 0.8s ease;
+}
+
+:has(section nav .icon input:checked) i {
+  transform: rotate(180deg);
+}
+
+:has(section nav .icon input:checked) .label-arrow i {
+  opacity: 1;
+  visibility: visible;
+}
+
+:has(section nav .icon input:checked) .label-menu-bar i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+:has(section nav .icon input:checked) nav {
+  animation: arrow-ani 1s linear both;
+}
+
+:has(section nav .icon input:not(:checked)) nav {
+  animation: bars-ani 0.5s linear both;
+}
+
+/* :has(nav .icon input:checked) ; */

@@ -1,0 +1,76 @@
+.box {
+  margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: #686868;
+}
+
+ul {
+  position: relative;
+  list-style: none;
+  font-size: 0px;
+  display: inline-block;
+  border: 1px solid #dad6d6aa;
+}
+
+li {
+  display: inline-block;
+  font-size: initial;
+  padding: 10px;
+  border-right: 1px solid #dad6d6aa;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+ul li label {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px;
+}
+
+:has(label > input:checked) > label {
+  color: white;
+  background-color: #3397dc;
+}
+
+.content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 26px;
+  border: solid 1px #dad6d6aa;
+  line-height: 2.4rem;
+  overflow-x: scroll;
+  transform-origin: top center;
+  transition: transform 1s ease;
+}
+
+:has(label > input:checked) > .content {
+  animation: check-ani 1s linear both;
+  transform: rotateX(0);
+}
+
+@keyframes check-ani {
+  0% {
+    transform: perspective(1000px) rotateX(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    transform: perspective(1000px) rotateX(-60deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
