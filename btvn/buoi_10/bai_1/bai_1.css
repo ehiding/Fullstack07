@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border-bottom-right-radius: 100%;
+  background: rgb(255, 255, 255);
+  color: #05a8f5;
+}
+
+nav .icon label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 27px;
+}
+
+.icon-arrow-right {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav .icon label i {
+  transition: transform 0.8s ease;
+}
+
+:has(section nav .icon input:checked) i {
+  transform: rotate(180deg);
+}
+
+:has(section nav .icon input:checked) .label-arrow i {
+  opacity: 1;
+  visibility: visible;
+}
+
+:has(section nav .icon input:checked) .label-menu-bar i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+:has(section nav .icon input:checked) nav {
+  animation: arrow-ani 1s linear both;
+}
+
+:has(section nav .icon input:not(:checked)) nav {
+  animation: bars-ani 0.5s linear both;
+}
+
+:has(nav .icon input:checked) .menu ul {
+  display: block;
+}
+
+@keyframes arrow-ani {
+  99% {
+    width: 9999px;
+    height: 9999px;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+@keyframes bars-ani {
+  0% {
+    width: 9999px;
+    height: 9999px;
+  }
+  100% {
+    border-bottom-right-radius: 100%;
+  }
+}
+
+nav .menu ul {
+  position: absolute;
+  top: 60px;
+  list-style: none;
+  display: none;
+}
+
+nav .menu ul li {
+  padding: 4px 0px;
+}
+
+nav .menu ul li a:focus {
+  background-color: #eeedef;
+  color: #034966;
+}
+
+nav .menu ul li a {
+  display: flex;
+  width: 220px;
+  height: 30px;
+  text-decoration: none;
+  color: #05a8f5;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  padding-left: 45px;
+}
+
+.burger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #05a8f5;
+}
+
+.burger .burger-content {
+  text-align: right;
+  color: white;
+  position: absolute;
+  right: 10%;
+  top: 35%;
+}
+
+.burger-content h1 {
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+
+.burger-content p {
+  display: flex;
+  line-height: 15px;
+  font-weight: 100;
+  font-size: 20px;
+  align-items: center;
+}
+
+.burger-content p span {
+  font-size: 40px;
+  margin-left: 5px;
+}
