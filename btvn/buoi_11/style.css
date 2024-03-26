@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  background: #f9f9f9;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+  /* background: #f9f9f9; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  margin: 50px 110px;
+  align-items: center;
+  width: 85%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap_menu .wrap_menu_list {
+  display: flex;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.wrap_menu {
+  /* border: 1px solid red; */
+  margin-left: 150px;
+}
+
+.wrap_menu_list li {
+  margin: 0px 20px;
+  list-style: none;
+}
+
+.wrap_menu_list li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.wrap_menu_list li a:hover {
+  color: #f54748;
+}
+
+.wrap_search {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.wrap_search_form {
+  display: flex;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #929292;
+}
+
+.fa-cart-shopping {
+  display: block;
+  position: absolute;
+  font-size: 2rem;
+  top: 8px;
+  right: 15px;
+  color: #4d4d4d;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon_shopping_cart::before {
+  content: "";
+  width: 2px;
+  height: 70%;
+  background: #f3f3f3;
+  position: absolute;
+  right: 45px;
+  top: 5px;
+}
+
+.icon_shopping_cart::after {
+  position: absolute;
+  content: "2";
+  width: 27px;
+  height: 27px;
+  top: -17px;
+  right: -7px;
+  font-size: 1.5rem;
+  background-color: #f86061;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.wrap_search_form input {
+  border: none;
+  outline: none;
+  padding: 10px 55px 10px 40px;
+  background: #fff;
+  border-radius: 5px;
+  color: black;
+}
+
+.order {
+  display: flex;
+}
+
+.strawberry_brand {
+  width: 190px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: #fdecec;
+  border-radius: 50px;
+}
+
+.title_strawberry {
+  font-size: 1.5rem;
+  margin: 50px 15px;
+}
+
+.content {
+  margin-top: 40px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 7rem;
+}
+
+.spec {
+  color: #f54748;
+}
+
+.describe {
+  word-spacing: 2px;
+  width: 85%;
+  font-size: 2rem;
+  color: #676767;
+}
+
+.order_btn {
+  margin-top: 40px;
+  display: flex;
+  width: 80%;
+  /* border: 1px solid red; */
+}
+
+.btn_order_now {
+  width: 170px;
+  height: 70px;
+  border: 1px solid #f86061;
+  display: flex;
+  border-radius: 10px;
+  background: #f86061;
+  cursor: pointer;
+}
+
+.path_format {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 22px auto;
+  color: white;
+}
+
+.btn_order_now:hover {
+  transition: 0.5s;
+  background: white;
+  /* border: 1px solid red; */
+}
+
+.btn_order_now:hover .path_format {
+  color: #f86061;
+  transition: 0.5s;
+}
+
+.icon_btn {
+  margin: 0px 40px;
+}
+
+.btn_order_process {
+  width: 150px;
+  height: 70px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.btn_order_process span {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 540;
+  margin: 22px 0px;
+  color: #2e2e2e;
+}
+
+.describe_image img {
+  width: 90%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin-top: 70px;
+}
+
+.ship {
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  border: 1px solid red;
+}
+
+.serve {
+  border: 1px solid red;
+  width: 40%;
+  height: auto;
+  margin: 140px auto;
+  text-align: center;
+}
+
+.ship .serve h4 {
+  color: #f54748;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.ship .serve h2 {
+  text-transform: capitalize;
+  margin-top: 10px;
+  font-size: 4rem;
+}
