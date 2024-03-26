@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.switch-toggle {
+  display: block;
+  height: 35px;
+  background-color: gray;
+  width: 80px;
+  border-radius: 99px;
+  margin: 30px auto;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.switch-toggle span.btn {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 1;
+  transition: left 0.3s ease;
+}
+
+.switch-toggle input:checked + span.btn {
+  left: calc(100% - 35px);
+}
+
+.switch-toggle span.bg {
+  content: "";
+  background: green;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: left 0.3s ease;
+}
+
+.switch-toggle input:checked ~ span.bg {
+  opacity: 1;
+}
