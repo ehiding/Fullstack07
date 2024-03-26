@@ -236,15 +236,16 @@ a {
 .ship {
   align-items: center;
   width: 100%;
-  height: 500px;
-  border: 1px solid red;
+  height: auto;
+  background: #fef5f5;
+  border: 1px solid #fef5f5;
 }
 
 .serve {
-  border: 1px solid red;
-  width: 40%;
+  /* border: 1px solid red; */
+  width: 45%;
   height: auto;
-  margin: 140px auto;
+  margin: 140px auto 0 auto;
   text-align: center;
 }
 
@@ -258,4 +259,244 @@ a {
   text-transform: capitalize;
   margin-top: 10px;
   font-size: 4rem;
+  font-weight: 800;
+  color: #2e2e2e;
+}
+
+.serve_form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.serve_form_box {
+  width: 70%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.box_product {
+  background: #ffffff;
+  width: calc(100% / 3);
+  height: auto;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 30px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.product_icon img {
+  width: 45%;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.box_product h3 {
+  margin-top: 40px;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box_product p {
+  color: #676767;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.box_product::before {
+  content: "";
+  position: absolute;
+  background: #f86061;
+  top: 0px;
+  left: 10px;
+  width: 100%;
+  height: 102%;
+  border-radius: 15px;
+  transition: all 0.3s linear;
+  transform-origin: 50% top;
+  opacity: 0;
+}
+
+.box_product:hover::before {
+  transform: rotate(-4deg) scale(100%, 103%);
+  opacity: 1;
+}
+
+.box_product::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  inset: 0;
+  border-radius: 10px;
+}
+
+.container_explore {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+}
+
+.wrap_explore {
+  margin: 50px 110px;
+  width: 85%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: auto;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.explore_image img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 710px;
+}
+
+.explore_info {
+  width: 30%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin-top: 170px;
+}
+
+.explore_info h4 {
+  color: #03a66b;
+  font-size: 2rem;
+  font-weight: 540;
+}
+
+.explore_info h2 {
+  margin-top: 10px;
+  font-size: 4rem;
+}
+
+.explore_info p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: #676767;
+}
+
+.wrap_delivery {
+  margin: 50px 110px;
+  width: 85%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: auto;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.delivery_info {
+  width: 40%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin-top: 180px;
+}
+
+.delivery_image img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 710px;
+  margin-left: 70px;
+}
+
+.delivery_info h4 {
+  color: #f9ba45;
+  font-size: 2rem;
+  font-weight: 540;
+}
+
+.delivery_info h2 {
+  margin-top: 10px;
+  font-size: 4rem;
+}
+
+.delivery_info p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: #676767;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  border: 1px solid #fef5f5;
+  background: #fef5f5;
+}
+
+.app_content {
+  width: 65%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin: 100px auto;
+  display: flex;
+}
+
+/* .app_content_left img {
+  border: 1px solid red;
+} */
+
+.app_content_right {
+  width: 50%;
+  /* border: 1px solid red; */
+  margin-top: 80px;
+  margin-left: 160px;
+}
+
+.app_content_right h4 {
+  color: #f54748;
+  font-size: 2rem;
+  font-weight: 540;
+}
+
+.app_content_right h2 {
+  margin-top: 10px;
+  font-size: 4rem;
+}
+
+.app_content_right p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: #676767;
+}
+
+.btn_store {
+  display: flex;
+}
+
+.icon_app {
+  width: 210px;
+  height: 70px;
+  border: 1px solid #eedcdc;
+  border-radius: 15px;
+  position: relative;
+  margin-right: 12px;
+}
+
+.icon_app img {
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.icon_app a {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 25px;
+  left: 95px;
+  color: black;
+  font-weight: 600;
 }
