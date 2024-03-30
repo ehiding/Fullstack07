@@ -1,0 +1,127 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header-row .menu {
+  margin-left: auto;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  display: block;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.header .header-row .contact .btn {
+  display: block;
+  background: #75b7eb;
+  padding: 10px 30px;
+  border-radius: 99px;
+  color: white;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.header .header-row .menu-toggle {
+  display: none;
+}
+
+.header .header-row .overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  background: #0000006b;
+  transition: 0.4s ease;
+  transition-property: opacity, visibility;
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header .header-row .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 250px;
+    background: black;
+    translate: -100%;
+    transition: translate 0.4s ease;
+    z-index: 1;
+  }
+
+  .header .header-row .menu ul {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .header .header-row .menu ul li a {
+    display: block;
+    color: white;
+    padding: 10px 0;
+  }
+
+  .header .header-row .menu-toggle {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .header .header-row .contact {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .header .header-row input[type="checkbox"]:checked ~ .menu {
+    translate: 0;
+  }
+
+  .header .header-row input[type="checkbox"]:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header .header-row .contact {
+    display: none;
+  }
+}
