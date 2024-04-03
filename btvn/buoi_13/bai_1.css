@@ -1,0 +1,331 @@
+body {
+  background: url("https://hoanganf8.github.io/htmlcss_project02/image/landing-background.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  margin-left: 15%;
+  max-width: 2000px;
+  height: 900px;
+  /* border: 1px solid red; */
+  display: flex;
+  /* visibility: hidden; */
+}
+
+.container .logo-form {
+  width: 40%;
+  height: 700px;
+  /* border: 1px solid red; */
+  margin-left: 2%;
+  margin-top: 10%;
+  text-align: center;
+  line-height: inherit;
+  position: relative;
+}
+
+.container .logo-form .icon-logo-vikinger {
+  position: relative;
+  left: 5px;
+  fill: white;
+  width: 45px;
+  height: 80px;
+  /* border: 1px solid red; */
+}
+
+.container .logo-form h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.container .logo-form h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 4.8rem;
+  font-weight: 900;
+}
+
+.container .logo-form > p {
+  width: 80%;
+  margin: 45px auto;
+  /* border: 1px solid red; */
+  color: white;
+  font-size: 0.9rem;
+}
+
+.container .logo-form .logo-form-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.container .logo-form .logo-form-btn label span {
+  display: inline-flex;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  border: 1px solid white;
+  transition: background-color 0.3s ease;
+}
+
+.container .logo-form .logo-form-btn label:first-child span {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.container .logo-form .logo-form-btn label:last-child span {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.logo-form-btn label:has(input:checked) span {
+  color: black;
+  background-color: white;
+}
+
+.container .login-form {
+  width: 480px;
+  height: 630px;
+  border: 1px solid red;
+  background: white;
+  margin-top: 50px;
+  border-radius: 10px;
+  position: relative;
+  transform: translate(-150px, 0px);
+  transition: 0.5s linear;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container .login-form .login-form-icon {
+  position: absolute;
+  top: -70px;
+  left: -80px;
+}
+
+.container .login-form h3 {
+  margin-top: 80px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #3e3f5e;
+  font-weight: 900;
+}
+
+.container .login-form .form-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* border: 1px solid red; */
+}
+
+.input-group {
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  padding: 0 5px;
+  pointer-events: none;
+  font-weight: 700;
+  color: #b3b5ce;
+}
+
+.input-group input {
+  width: 380px;
+  height: 65px;
+  font-size: 1.5rem;
+  padding: 0 20px;
+  background: transparent;
+  border: 1px solid #dedeea;
+  border-radius: 10px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 0.8rem;
+  background: white;
+  transition: 0.7s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+  border: 1px solid #615dfa;
+}
+
+.remember {
+  margin: 30px 0 30px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.remember label {
+  color: #3e3f5e;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  cursor: pointer;
+}
+
+.remember label input {
+  accent-color: #23d2e2;
+}
+
+.remember span a:hover {
+  color: #23d2e2;
+}
+
+.remember label .check-fake {
+  display: flex;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dedeea;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fa-xmark {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.check-btn label:has(input:checked) span {
+  background-color: #23d2e2;
+}
+
+.check-btn label:has(input:checked) span .fa-xmark {
+  opacity: 1;
+  visibility: visible;
+}
+
+.forget {
+  margin-left: 140px;
+}
+
+.form-div-btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background: #615dfa;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #b3b5ce;
+}
+
+.form-div .form-div-btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.note > p {
+  margin: 35px 0 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3e3f5e;
+  text-align: center;
+  position: relative;
+}
+
+.note > p::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #b3b5ce;
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+
+.note > p::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #b3b5ce;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.social-item {
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+.social-item a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s linear;
+}
+
+.social-item a:nth-child(1) {
+  background-color: #3763d2;
+}
+.social-item a:nth-child(2) {
+  background-color: #1abcff;
+}
+.social-item a:nth-child(3) {
+  background-color: #7b5dfa;
+}
+.social-item a:nth-child(4) {
+  background-color: #fd434f;
+}
+
+.social-item a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+.social-item a {
+  margin-left: 5px;
+}
+
+.social-item a:hover {
+  transform: translateY(-10px);
+}
+
+.login-form {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container:has(.logo-form-btn #idlogin:checked) .login-form {
+  transform: translateX(-50%);
+  visibility: visible;
+  opacity: 1;
+}
