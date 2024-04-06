@@ -1,0 +1,242 @@
+header .header .title-logo {
+  display: flex;
+  cursor: pointer;
+}
+
+header .header .title-logo > span {
+  color: #ffa500;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+header .header .title-logo > h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+header .header .menu ul {
+  display: flex;
+}
+
+header .header .menu ul li a {
+  display: block;
+  padding: 0 10px;
+  color: white;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+header .header .menu ul li a:hover {
+  color: #ffa500;
+}
+
+header .header .order_button {
+  display: block;
+  background-color: #ffa500;
+  padding: 10px 18px;
+  border-radius: 99px;
+  margin-left: 80px;
+}
+
+header .header .order_button:hover {
+  border: 1px solid #ffa500;
+  background: #5e4c2b;
+}
+
+header .header .order_button a:hover {
+  color: white;
+}
+
+header .header .order_button > a {
+  color: #363636;
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+
+header .header .logo_icon .fa-moon {
+  display: block;
+  /* border: 1px solid red; */
+  padding: 5px 10px;
+  border-radius: 99px;
+  border: 1px solid #ffa500;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+header .header .menu-toggle {
+  color: white;
+  font-size: 2rem;
+  margin-right: 10%;
+  display: none;
+}
+
+header .header .menu-toggle .fa-bars {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768.98px) {
+  header .header .menu {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    min-width: 100%;
+    background: #222222;
+    transform: translateY(-200px);
+    transition: translate 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  header .header .menu ul {
+    display: block;
+    line-height: 35px;
+  }
+
+  header .header .menu-toggle {
+    display: block;
+    margin-left: 20px;
+  }
+
+  header .header .title-logo {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  header .header .order_button {
+    margin-right: 20px;
+  }
+
+  header .header input[type="checkbox"]:checked + .menu {
+    transform: translateY(0);
+    transition: translate 0.4s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main-mumbai {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 7rem;
+  height: 80vh;
+  background: black
+    url("https://raw.githubusercontent.com/duyvn0612/f8_fullstack_k7/main/Day_14/Bai_1/image/sideimage.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 5vw 5vw;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.47);
+  z-index: 0;
+  border-radius: 12px;
+}
+.mumbai-city-intro {
+  position: relative;
+  text-align: center;
+  /* padding-bottom: 20px; */
+}
+
+.mumbai-city-intro .distance-item {
+  margin-block: 15px;
+}
+
+.mumbai-city-intro h2 {
+  text-transform: capitalize;
+  font-size: 6rem;
+  line-height: 15px;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem orange;
+}
+
+.mumbai-city-intro h1 {
+  font-size: 7rem;
+  line-height: 12rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.mumbai-city-intro p {
+  /* text-align: center; */
+  margin: 10px auto;
+  width: 45%;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  color: white;
+  /* border: 1px solid red; */
+}
+
+.mumbai-city-intro a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  color: #363636;
+  border: 2px solid orange;
+  background-color: orange;
+  padding: 1rem 1rem;
+  border-radius: 99px;
+}
+.main-mumbai .banner-price {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  top: 100%;
+  transform: translateY(-28%);
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 20px;
+  box-shadow: 0px 2px 6px 1px #0000003a;
+}
+
+.main-mumbai .banner-price p {
+  text-transform: capitalize;
+  color: orange;
+  /* text-align: left;  */
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.main-mumbai .banner-price a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  color: #363636;
+  border: 2px solid orange;
+  background-color: orange;
+  padding: 1rem 1rem;
+  border-radius: 99px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.main-mumbai .banner-price a:hover {
+  color: orange;
+  background-color: rgba(255, 166, 0, 0.268);
+}
+
+.nav-book-now a:hover,
+.mumbai-city-intro a:hover {
+  color: white;
+  background-color: rgba(255, 166, 0, 0.268);
+}
+
+.container .row {
+  display: inline-flex;
+}
