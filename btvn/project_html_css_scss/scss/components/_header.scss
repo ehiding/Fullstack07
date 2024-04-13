@@ -1,0 +1,152 @@
+.header {
+  padding: 20px 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 30px;
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+
+    input[type="checkbox"] {
+      &:checked {
+        ~ .header-menu {
+          translate: 0;
+        }
+
+        ~ .menu-overlay {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    .menu-overlay {
+      background: #00000079;
+      position: fixed;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(opacity);
+    }
+
+    .header-menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: $primaryColor;
+      min-width: 250px;
+      translate: -100%;
+      @include transition(translate);
+      ul {
+        display: block;
+        justify-content: flex-end;
+        padding: 20px;
+        li {
+          a {
+            display: block;
+            color: white;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+
+    .header-icon {
+      display: flex;
+      justify-content: space-between;
+      //   padding-left: 30px;
+      .cart-icon {
+        position: relative;
+        margin-right: 60px;
+        span {
+          position: absolute;
+          right: -10px;
+          top: -12px;
+          background: $secondaryColor;
+          color: white;
+          padding: 0 4px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .menu-toggle {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    .header-right {
+      justify-content: flex-end;
+      .menu-overlay {
+        display: none;
+      }
+      .header-menu {
+        translate: 0;
+        // display: block;
+        position: static;
+        background: none;
+
+        ul {
+          padding: 0;
+          display: flex;
+          li {
+            padding: 0 15px;
+            a {
+              font-weight: 600;
+              font-size: 1.5rem;
+              //   padding: 45px 0;
+              color: $textColor;
+              &.active {
+                color: $primaryColor;
+                border-bottom: 3px solid $primaryColor;
+              }
+              &:hover {
+                @extend .active;
+              }
+            }
+          }
+        }
+        .header-icon {
+          padding-left: 15px;
+          .cart-icon {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440) {
+  .header {
+    .header-right {
+      justify-content: flex-start;
+      .header-menu {
+        ul {
+          li {
+            padding: 0 30px;
+            a {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      .header-icon {
+        padding-left: 30px;
+        .cart-icon {
+          margin-right: 60px;
+        }
+      }
+    }
+  }
+}
