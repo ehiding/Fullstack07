@@ -68,11 +68,11 @@ console.log(" ");
 
 // bài 5
 console.log("Bài 5:");
-var x = 646,
-  y = 162,
-  z = 69,
-  tmp;
-var array = [x, y, z];
+var a = 1,
+  b = 2,
+  c = 3,
+  z;
+var array = [a, b, c];
 for (var i = 0; i < array.length; i++) {
   console.log(" Số thứ " + (i + 1) + ": " + array[i]);
 }
@@ -81,7 +81,7 @@ for (var i = 0; i < array.length; i++) {
     if (array[i] > array[j]) {
       tmp = array[i];
       array[i] = array[j];
-      array[j] = tmp;
+      array[j] = z;
     }
   }
 }
