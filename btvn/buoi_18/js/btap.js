@@ -65,3 +65,65 @@ kwhBtn.addEventListener("click", (event) => {
     document.getElementById("electricPrice").innerHTML = `${kwhPrice} vnd`;
   }
 });
+// end bài 2
+
+// bài 3
+var bTap3 = document.getElementById("bTap3");
+
+function soNguyen(n) {
+  var a = 1;
+  var s = 0;
+  for (i = 1; i <= n; i++) {
+    a = i * (i + 1);
+    s += a;
+  }
+  return s;
+}
+
+bTap3.addEventListener("click", (event) => {
+  event.preventDefault();
+  var input = parseInt(document.getElementById("nhapN").value);
+  if (input == 0 || input == "" || isNaN(input)) {
+    alert("Vui lòng nhập lại");
+  } else {
+    var result = soNguyen(input);
+    document.getElementById("bTap3Result").innerHTML = result;
+  }
+});
+// end bài 3
+
+// bài 4
+var bTap4 = document.getElementById("bTap4");
+
+function soNguyen(n) {
+  if (n < 2) {
+    return false;
+  } else {
+    for (i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+bTap4.addEventListener("click", (event) => {
+  event.preventDefault();
+  var input = parseInt(document.getElementById("input4").value);
+  if (input == 0 || input == "" || isNaN(input)) {
+    alert("Vui lòng nhập lại");
+  } else {
+    result = soNguyen(input);
+    if (result) {
+      document.getElementById(
+        "ntResult"
+      ).innerHTML = `${input} là số nguyên tố`;
+    } else {
+      document.getElementById(
+        "ntResult"
+      ).innerHTML = `${input} không là số nguyên tố`;
+    }
+  }
+});
+// end bài 4
