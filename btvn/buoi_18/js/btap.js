@@ -68,17 +68,26 @@ kwhBtn.addEventListener("click", (event) => {
 // end bài 2
 
 // bài 3
-var bTap3 = document.getElementById("bTap3");
-
-function soNguyen(n) {
-  var a = 1;
+var bTap3 = document.getElementById("calc3btn");
+function calc3(n) {
+  var temp = 1;
   var s = 0;
   for (i = 1; i <= n; i++) {
-    a = i * (i + 1);
-    s += a;
+    temp = i * (i + 1);
+    s += temp;
   }
   return s;
 }
+bTap3.addEventListener("click", (event) => {
+  event.preventDefault();
+  var input = parseInt(document.getElementById("b3input").value);
+  if (input == 0 || input == "" || isNaN(input)) {
+    alert("Vui lòng nhập lại");
+  } else {
+    var result = calc3(input);
+    document.getElementById("calcResult").innerHTML = result;
+  }
+});
 
 bTap3.addEventListener("click", (event) => {
   event.preventDefault();
@@ -127,3 +136,68 @@ bTap4.addEventListener("click", (event) => {
   }
 });
 // end bài 4
+
+// bài 5
+var bTap5 = document.getElementById("bTap5");
+
+function triangle(n) {
+  var result = "";
+  var count = 0;
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      count++;
+      result += count + " ";
+    }
+    result += "<br>";
+  }
+  return result;
+}
+
+bTap5.addEventListener("click", (event) => {
+  event.preventDefault();
+  var input = parseInt(document.getElementById("inputBtap5").value);
+  if (input === " " || input === 0 || isNaN(input)) {
+    alert("Vui lòng nhập lại");
+  } else {
+    var result = triangle(input);
+    document.getElementById("resultBtap5").innerHTML = result;
+  }
+});
+// end bài 5
+
+// bài 6
+var btn6 = document.getElementById("btn6");
+let board = document.getElementById("board");
+
+function chess() {
+  for (let i = 1; i <= 8; i++) {
+    const cellContainer = document.createElement("div");
+    cellContainer.className = "cellContainer";
+    for (let j = 1; j <= 8; j++) {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+
+      if (i % 2 === 0) {
+        if (j % 2 === 0) {
+          cell.style.backgroundColor = "black";
+        } else {
+          cell.style.backgroundColor = "white";
+        }
+      } else {
+        if (j % 2 === 0) {
+          cell.style.backgroundColor = "white";
+        } else {
+          cell.style.backgroundColor = "black";
+        }
+      }
+
+      cellContainer.append(cell);
+    }
+    board.append(cellContainer);
+  }
+}
+btn6.addEventListener("click", (event) => {
+  event.preventDefault();
+  chess();
+});
+// end bài 6
