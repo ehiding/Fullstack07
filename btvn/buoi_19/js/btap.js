@@ -42,20 +42,6 @@ bTap2.addEventListener("click", (event) => {
 // end bTap2
 
 // bTap_3
-var bTap3 = document.getElementById("bTap3");
-var btnResultConvert = document.getElementById("btnResultConvert");
-var numberConvert = document.getElementById("numberConvert");
-var arrNumber = {
-  0: "không",
-  1: "một",
-  2: "hai",
-  3: "ba",
-  4: "bốn",
-  5: "năm",
-  6: "sáu",
-  7: "bảy",
-  8: "tám",
-  9: "chín",
-};
+
 
 // end bTap_3
