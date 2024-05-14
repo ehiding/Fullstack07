@@ -55,3 +55,44 @@ function Unzip(arr = []) {
 console.log("Mảng được tách theo đúng kiểu dữ liệu: ", Unzip(arrBTap_3));
 console.log(" ");
 // end bTap_3
+
+// bTap_4
+var arrBTap_4 = [
+  {
+    img: "https://picsum.photos/150",
+    title: "Tiêu đề bài viết 1",
+    paragraph:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore expedita ducimus nesciunt dolor nostrum consectetur architecto molestiae nemo eaque facilis!",
+  },
+  {
+    img: "https://picsum.photos/150",
+    title: "Tiêu đề bài viết 2",
+    paragraph:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore expedita ducimus nesciunt dolor nostrum consectetur architecto molestiae nemo eaque facilis!",
+  },
+  {
+    img: "https://picsum.photos/150",
+    title: "Tiêu đề bài viết 3",
+    paragraph:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore expedita ducimus nesciunt dolor nostrum consectetur architecto molestiae nemo eaque facilis!",
+  },
+];
+
+var container = document.querySelector(".container");
+
+var arrBTap_4_New = " ";
+
+arrBTap_4.forEach(function (tag) {
+  arrBTap_4_New += `
+      <div class="box">
+          <img src ="${tag.img}" class="img"></img>
+          <div class="text">
+              <h1 class="title">${tag.title} </h1>
+              <p class="para">${tag.paragraph} </p>
+          </div>
+      </div>
+      <hr></hr>
+      `;
+});
+container.innerHTML = arrBTap_4_New;
+// end bTap_4
