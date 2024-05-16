@@ -97,7 +97,7 @@ function firstMissingPositive(nums) {
   /* Ví dụ: Cho mảng nums đã được sắp xếp theo thứ tự từ bé đến lớn [-1,1,3,4,5]
       Cho n = 1
       Cho i = 0 thì nums[0] = -1
-      Vì -1 < 1 ( num[i] khác n ) --> n vẫn = 1
+      Vì -1 < 1 ( nums[i] khác n ) --> n vẫn = 1
       Tiếp tục chạy vòng lặp với i = 1 --> nums[1] = 1
       Vì lúc này nums[i] = n ( 1 = 1 ) --> n tăng lên 1 đơn vị --> n = 2
       Tiếp tục chạy vòng lặp với i = 2 --> nums[2] = 3
