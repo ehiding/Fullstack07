@@ -89,7 +89,7 @@ function firstMissingPositive(nums) {
   // Cho i chạy từ 0 trong vòng lặp for với điều kiện i < kích thước mảng nums
   for (i = 0; i < nums.length; i++) {
     // Nếu kích thước i của mảng nums bằng với n thì n sẽ tăng lên 1. Ta lặp lại quá trình đến khi n bằng kích thước mảng nums
-    if (nums[i] == n) n++;
+    if (nums[i] === n) n++;
   }
   // Sau khi vòng lặp kết thúc thì n chính là số nguyên dương cần tìm, ta trả n về cho hàm
   return n;
