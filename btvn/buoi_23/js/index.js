@@ -88,14 +88,26 @@ function firstMissingPositive(nums) {
   var n = 1;
   // Cho i chạy từ 0 trong vòng lặp for với điều kiện i < kích thước mảng nums
   for (i = 0; i < nums.length; i++) {
-    // Nếu kích thước i của mảng nums bằng với n thì n sẽ tăng lên 1. Ta lặp lại quá trình đến khi n bằng kích thước mảng nums
+    // Nếu vị trí phần tử i của mảng nums bằng với n thì n sẽ tăng lên 1
     if (nums[i] === n) n++;
   }
   // Sau khi vòng lặp kết thúc thì n chính là số nguyên dương cần tìm, ta trả n về cho hàm
   return n;
+
+  /* Ví dụ: Cho mảng nums đã được sắp xếp theo thứ tự từ bé đến lớn [-1,1,3,4,5]
+      Cho n = 1
+      Cho i = 0 thì nums[0] = -1
+      Vì -1 < 1 ( num[i] khác n ) --> n vẫn = 1
+      Tiếp tục chạy vòng lặp với i = 1 --> nums[1] = 1
+      Vì lúc này nums[i] = n ( 1 = 1 ) --> n tăng lên 1 đơn vị --> n = 2
+      Tiếp tục chạy vòng lặp với i = 2 --> nums[2] = 3
+      --> n vẫn = 2 do nums[2] khác n ( 3 > 2 )
+      Cứ thế tiếp tục vòng lặp đến khi chạy đến hết mảng nums ( Với điều kiện i luôn nhỏ hơn độ dài mảng nums )
+      --> n = 2 là số nguyên dương cần tìm
+     */
 }
 
-var arr = [3, 4, -1, 6, 1, 5, 2];
+var arr = [3, -1, 6, 1, 5, 2];
 console.log(`Mảng chưa được sắp xếp: ` + arr);
 console.log(
   `Số nguyên dương nhỏ nhất không có trong nums là: ` +
