@@ -48,7 +48,10 @@ console.log(`Mảng nums1 là: ` + nums1);
 console.log(`Mảng nums2 là: ` + nums2);
 
 var i = nums1.length;
+console.log(`Kích thước m của mảng num1 là: ` + i);
 var j = nums2.length;
+console.log(`Kích thước n của mảng num2 là: ` + j);
+
 var n = i + j;
 
 var arr = nums1.concat(nums2);
