@@ -19,7 +19,10 @@ function nextPrimeNum(num) {
 var num = 6;
 console.log(`Cho n = ` + num);
 console.log(
-  `Số nguyên tố đối xứng nhỏ nhất lớn hơn hoặc bằng n là: ` + nextPrimeNum(num)
+  `Số nguyên tố đối xứng nhỏ nhất lớn hơn hoặc bằng ` +
+    num +
+    ` là: ` +
+    nextPrimeNum(num)
 );
 // end bTap_1
 
