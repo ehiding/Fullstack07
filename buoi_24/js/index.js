@@ -1,96 +1,117 @@
 // bTap_1
-var errors = {
-  name: {
-    required: "Vui lòng nhập họ tên",
-    min: "Họ tên phải từ 5 ký tự",
-  },
-  email: {
-    email: "Định dạng email không hợp lệ",
-    unique: "Email đã có người sử dụng",
-    required: "Vui lòng nhập địa chỉ email",
-  },
-  password: {
-    required: "Vui lòng nhập mật khẩu",
-    same: "Mật khẩu phải khớp với mật khẩu nhập lại",
-  },
+var sum = function (arrBTap_1) {
+  return arrBTap_1.reduce(function (start, end) {
+    return start + end;
+  });
 };
 
-function getError(field) {
-  var fieldArr = field.slice(0);
-  if (field.includes(".")) {
-    return console.log("Bài 1: ", errors[fieldArr[0]][fieldArr[1]]);
-  }
-  return console.log("Bài 1: ", errors[fieldArr].required);
-}
+var check = sum([1, 2, 3, 4, 5]);
 
-getError("email");
+if ((check = Number(check))) {
+  console.log(check);
+  console.log("Đây là kiểu dữ liệu number");
+} else {
+  console.log(check);
+  console.log("Vui lòng nhập lại đúng kiểu dữ liệu number");
+}
 // end bTap_1
 
-// bTap_2
-console.log(" ");
-console.log("Bài 2:");
-const customers = [
-  { name: "Nguyễn Văn A", age: 11, address: "Ha Noi" },
-  { name: "Nguyễn Văn B", age: 2, address: "Hai Phong" },
-  { name: "Nguyễn Văn C", age: 12, address: "TP.HCM" },
+// bTap_3
+var arrBTap_3 = [
+  {
+    id: 1,
+    name: "Chuyên mục 1",
+    parent: 0,
+  },
+  {
+    id: 2,
+    name: "Chuyên mục 2",
+    parent: 0,
+  },
+  {
+    id: 3,
+    name: "Chuyên mục 3",
+    parent: 0,
+  },
+  {
+    id: 4,
+    name: "Chuyên mục 2.1",
+    parent: 2,
+  },
+  {
+    id: 5,
+    name: "Chuyên mục 2.2",
+    parent: 2,
+  },
+  {
+    id: 6,
+    name: "Chuyên mục 2.3",
+    parent: 2,
+  },
+  {
+    id: 7,
+    name: "Chuyên mục 3.1",
+    parent: 3,
+  },
+  {
+    id: 8,
+    name: "Chuyên mục 3.2",
+    parent: 3,
+  },
+  {
+    id: 9,
+    name: "Chuyên mục 3.3",
+    parent: 3,
+  },
+  {
+    id: 10,
+    name: "Chuyên mục 2.2.1",
+    parent: 5,
+  },
+  {
+    id: 11,
+    name: "Chuyên mục 2.2.2",
+    parent: 5,
+  },
 ];
 
-function createCustomers(customers) {
-  return customers.map(function (customers) {
-    var shortNameArray = customers.name.split(" ");
-    customers["shortName"] = `${shortNameArray[0]} ${shortNameArray.slice(
-      -1
-    )}}`;
-    return customers;
-  });
-}
-
-console.log("Mảng sau khi sắp xếp và thêm thuộc tính:");
-console.log(createCustomers(customers));
-// end bTap_2
-
-// bTap_3
-console.log(" ");
-console.log("Bài Tập 3:");
-const data = [];
-const dataRegisterA = handleRegister(
-  "Nguyen Van A",
-  "123456",
-  "nguyenvana@email.com"
-);
-const dataRegisterB = handleRegister(
-  "Nguyen Van B",
-  "1234567",
-  "nguyenvanb@email.com"
-);
-
-function handleRegister(name, password, email) {
-  if (!name || !password || !email) {
-    return console.log("Vui lòng nhập đầy đủ thông tin");
-  }
-  return data.push({
-    name: name,
-    password: password,
-    email: email,
-    role: "user",
-  });
-}
-function handleLogin(email, password) {
-  if (!password || !email) {
-    return console.log("Vui lòng nhập đầy đủ thông tin");
-  }
-  var userData = data.filter(function (user) {
-    if (user.email.includes(email) && user.password.includes(password)) {
-      return user;
+function nested(arr, parentID = 0) {
+  var result = [];
+  for (var item of arr) {
+    if (item.parent === parentID) {
+      var children = nested(arr, item.id);
+      if (children.length > 0) {
+        item.children = children;
+      }
+      delete item.parent;
+      result.push(item);
     }
-  });
-  if (userData.length === 0) {
-    return "Thông tin đăng nhập không hợp lệ";
   }
-  return userData;
+  return result;
 }
 
-console.log("Data =", data);
-var dataLogin = handleLogin("nguyenvanb@email.com", "1234567");
-console.log("DataLogin = ", dataLogin);
+var categories = nested(arrBTap_3);
+console.log(categories);
 // end bTap_3
+
+// bTap_4
+Array.prototype.reduce2 = function (callback, result) {
+  i = 0;
+  if (arguments.length < 2) {
+    i = 1;
+    result = this[0];
+  }
+  for (; i < this.length; i++) {
+    result = callback(result, this[i], i, this);
+  }
+  return result;
+};
+
+var numbers = [1, 2, 3, 4, 5];
+
+var result = numbers.reduce2((total, number) => {
+  return total + number;
+});
+
+console.log(result);
+// end bTap_4
