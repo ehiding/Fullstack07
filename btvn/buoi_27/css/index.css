@@ -75,6 +75,7 @@
   background-color: #eeeeee;
   border: 1px solid #eeeeee;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .logo-form-btn label:has(input:checked) span {
