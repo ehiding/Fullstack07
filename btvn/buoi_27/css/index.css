@@ -1,0 +1,83 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.loginModal {
+  cursor: pointer;
+}
+
+.modal-login-registration {
+  background: white;
+  border-radius: 5px;
+  width: 423px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid white;
+}
+
+.icon {
+  display: block;
+  width: 110px;
+  height: 25px;
+  margin: auto;
+  margin-top: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  /* padding: 15px; */
+}
+
+.close {
+  color: #4d4d4d;
+  float: right;
+  font-size: 37px;
+  /* border: 1px solid red; */
+  margin-top: -40px;
+  margin-right: 20px;
+  display: block;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-form-btn {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logo-form-btn label span {
+  display: inline-flex;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  /* height: auto; */
+  color: #858585;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  transition: background-color 0.3s ease;
+}
+
+.logo-form-btn label:has(input:checked) span {
+  color: white;
+  background-color: green;
+}
