@@ -23,3 +23,15 @@ document.addEventListener("keyup", function (e) {
     modal.style.display = "none";
   }
 });
+
+// Show_password
+var showPassword = document.querySelector("#show_password");
+var passwordField = document.querySelector("#password");
+
+showPassword.addEventListener("click", function () {
+  this.classList.toggle("fa-eye");
+  var type =
+    passwordField.getAttribute("type") === "password" ? "text" : "password";
+  passwordField.setAttribute("type", type);
+});
+// end Show_password
