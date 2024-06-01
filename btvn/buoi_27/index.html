@@ -33,7 +33,7 @@
                 type="radio"
                 name="toggler"
                 value="1"
-                id="idlogin"
+                id="btnLogin"
                 hidden
                 checked
               />
@@ -44,7 +44,7 @@
                 type="radio"
                 name="toggler"
                 value="2"
-                id="idresgister"
+                id="btnRegistration"
                 hidden
                 checked
               />
@@ -52,31 +52,52 @@
             >
           </div>
 
-          <div class="form_login" id="form">
+          <div class="form_regis" id="form">
             <form action="#">
-              <p>Email</p>
-              <input
-                type="text"
-                placeholder="Email"
-                id="email"
-                onkeydown="validation()"
-                required
-              />
-              <span id="text"></span>
-              <div class="input_password">
-                <p>Mật khẩu</p>
+              <div class="input_field" id="nameField">
+                <p>Họ và tên</p>
                 <input
-                  class="password"
-                  type="password"
-                  placeholder="Mật khẩu"
-                  id="password"
-                  onkeydown="validationPassword()"
+                  type="text"
+                  placeholder="Họ và tên"
+                  id="name"
+                  onkeydown="validationName()"
                   required
                 />
-                <i class="fa-solid fa-eye-slash" id="show_password"></i>
+                <span id="textName"></span>
               </div>
-              <span id="textPassword"></span>
+
+              <div class="input_field">
+                <p>Email</p>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  id="email"
+                  onkeydown="validation()"
+                  required
+                />
+                <span id="text"></span>
+              </div>
+
+              <div class="input_field">
+                <div class="input_password">
+                  <p>Mật khẩu</p>
+                  <input
+                    class="password"
+                    type="password"
+                    placeholder="Mật khẩu"
+                    id="password"
+                    onkeydown="validationPassword()"
+                    required
+                  />
+                  <i class="fa-solid fa-eye-slash" id="show_password"></i>
+                </div>
+                <span id="textPassword"></span>
+              </div>
             </form>
+          </div>
+
+          <div class="regestration_btn">
+            <button class="Regis_btn" id="Regis_btn">Đăng ký</button>
           </div>
         </div>
       </div>
