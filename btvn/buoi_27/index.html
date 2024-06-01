@@ -52,10 +52,17 @@
             >
           </div>
 
-          <div class="form_login">
+          <div class="form_login" id="form">
             <form action="#">
               <p>Email</p>
-              <input type="text" placeholder="Email" required />
+              <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                onkeydown="validation()"
+                required
+              />
+              <span id="text"></span>
               <div class="input_password">
                 <p>Mật khẩu</p>
                 <input
@@ -63,10 +70,12 @@
                   type="password"
                   placeholder="Mật khẩu"
                   id="password"
+                  onkeydown="validationPassword()"
                   required
                 />
                 <i class="fa-solid fa-eye-slash" id="show_password"></i>
               </div>
+              <span id="textPassword"></span>
             </form>
           </div>
         </div>
