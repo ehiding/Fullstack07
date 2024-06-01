@@ -36,6 +36,28 @@ showPassword.addEventListener("click", function () {
 });
 // end Show_password
 
+// Validation
+function validationName() {
+  var name = document.getElementById("name").value;
+  var textName = document.getElementById("textName");
+
+  var checkName_1 = /[a-z]/;
+  var checkName_2 = /[A-Z]/;
+  var checkName_3 = /.{8,}/;
+
+  if (
+    name.match(checkName_1) &&
+    name.match(checkName_2) &&
+    name.match(checkName_3)
+  ) {
+    textName.innerHTML = "Họ và tên hợp lệ";
+    textName.style.color = "green";
+  } else {
+    textName.innerHTML = "Họ và tên không hợp lệ";
+    textName.style.color = "red";
+  }
+}
+
 function validation() {
   var form = document.getElementById("form");
   var email = document.getElementById("email").value;
@@ -79,3 +101,25 @@ function validationPassword() {
     textPassword.style.color = "red";
   }
 }
+// end Validation
+
+// Registration - Login
+var btnLogin = document.getElementById("btnLogin");
+var btnRegistration = document.getElementById("btnRegistration");
+var Regis_btn = document.getElementById("Regis_btn");
+var nameField = document.getElementById("nameField");
+
+btnLogin.onclick = function () {
+  nameField.style.maxHeight = "0";
+  Regis_btn.innerHTML = "Đăng nhập";
+  btnRegistration.classList.add("disable");
+  btnLogin.classList.remove("disable");
+};
+
+btnRegistration.onclick = function () {
+  nameField.style.maxHeight = "100px";
+  Regis_btn.innerHTML = "Đăng ký";
+  btnRegistration.classList.remove("disable");
+  btnLogin.classList.add("disable");
+};
+// end Registration - Login
