@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="content">
+    <div class="container">
       <h1>get things done !</h1>
-      <div class="wrapper">
-        <div class="to-do-input">
-          <input
-            type="text"
-            id="item"
-            placeholder="What is the task today?"
-          /><button class="btn-enter">Add Task</button>
+      <div class="card">
+        <div class="card-body">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="inputField"
+              placeholder="What is the task today?"
+            /><button type="button" class="btn btn-primary" id="addToDo">
+              Add Task
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="to-do-list"></div>
+      <div class="to-dos" id="toDoContainer"></div>
     </div>
+
     <script src="js/index.js"></script>
   </body>
 </html>
