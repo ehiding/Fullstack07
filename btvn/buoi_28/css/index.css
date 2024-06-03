@@ -9,18 +9,18 @@ body {
   background: #8758ff;
 }
 
-.content {
+.container {
   width: 450px;
-  height: 500px;
   border-radius: 5px;
   background: #1a1a40;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+  padding: 5px 0 60px;
 }
 
-.content h1 {
+.container h1 {
   font-size: 1.7rem;
   color: white;
   text-transform: capitalize;
@@ -29,7 +29,7 @@ body {
   font-weight: 700;
 }
 
-.wrapper {
+.card {
   width: 370px;
   max-width: 100%;
   position: relative;
@@ -37,7 +37,7 @@ body {
   margin-top: 30px;
 }
 
-.wrapper input {
+.card-body input {
   border: 2px solid #8758ff;
   background: #1a1a40;
   padding: 10px 20px;
@@ -46,7 +46,7 @@ body {
   font-weight: 500;
 }
 
-.wrapper button {
+.card-body button {
   background-color: #8758ff;
   height: 100%;
   width: 80px;
@@ -58,6 +58,49 @@ body {
   cursor: pointer;
 }
 
-.wrapper input:focus {
+.new-task-form input:focus {
   color: white;
+}
+
+.item {
+  width: 370px;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #8758ff;
+}
+
+.content {
+  width: 370px;
+  max-width: 100%;
+  background: #8758ff;
+  margin: 0 auto;
+  border: 0px;
+}
+
+.content input {
+  background: #8758ff;
+  padding: 10px 20px;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  border: 0px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #8758ff;
+  color: white;
+}
+
+.actions i {
+  color: white;
+  cursor: pointer;
+  background: 8758ff;
 }
