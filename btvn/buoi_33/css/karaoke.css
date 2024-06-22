@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.player audio {
+  width: 100%;
+}
+
+.player {
+  max-width: 90%;
+  margin: 0 auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.player .player-btn {
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.player .play-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.play-timer .progress-bar {
+  width: 100%;
+  height: 10px;
+  background: gray;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: red;
+}
+
+.progress-bar .progress span {
+  display: block;
+  width: 13px;
+  height: 13px;
+  background: blueviolet;
+  position: absolute;
+  right: 0;
+  top: -1.5px;
+  border-radius: 50%;
+  translate: 50%;
+  cursor: pointer;
+}
+
+.progress-bar .time {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  translate: -50% 0px;
+  background: #000;
+  color: #fff;
+  font-size: 0.5rem;
+  display: none;
+}
+
+.progress-bar span,
+.progress-bar .progress::before {
+  display: none;
+}
+
+.play-timer:hover .progress-bar span,
+.play-timer:hover .progress-bar .progress::before {
+  display: block;
+}
