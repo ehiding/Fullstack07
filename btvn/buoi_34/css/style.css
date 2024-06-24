@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap");
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.container {
+  width: 44%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(66, 134, 244);
+  padding: 15px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.taskInput {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+input[type="text"] {
+  outline: none;
+  border: 1px solid white;
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+
+  margin-bottom: 20px;
+}
+
+#addButton {
+  background-color: blueviolet;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 15px;
+}
+
+#addButton:hover {
+  background-color: blueviolet;
+}
+
+ul {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto;
+}
+
+li {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8bb3f4;
+  border: 1px solid white;
+  margin-top: 5px;
+}
+
+.remove {
+  border: 0;
+  display: flex;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+#clearAllTask {
+  border-radius: 50px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    height: 600px;
+  }
+}
