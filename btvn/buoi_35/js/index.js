@@ -40,10 +40,16 @@ pdfBtn.addEventListener("click", () => {
   html2pdf().from(content).save(fileName.value);
 });
 
-const countCharacters = document.querySelector(".number-of-characters");
+function countCharacters() {
+  const content = document.querySelector("#content").innerText;
 
-function charNumber() {
-  const text = content.value;
-  const textLength = text.length;
-  content.innerText = `${textLength}`;
+  const charCount = content.length;
+  document.getElementById("charCount").textContent = charCount;
+}
+
+function countWords() {
+  const content = document.querySelector("#content").innerText;
+
+  const wordCount = content.split(/\s+/).length;
+  document.getElementById("wordCount").textContent = wordCount;
 }
