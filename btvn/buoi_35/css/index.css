@@ -46,3 +46,9 @@
   min-height: 300px;
   margin: 30px 0;
 }
+
+.counting {
+  display: flex;
+  gap: 20px;
+  float: right;
+}
