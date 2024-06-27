@@ -45,6 +45,12 @@ function countCharacters() {
 
   const charCount = content.length;
   document.getElementById("charCount").textContent = charCount;
+
+  const uppercaseCount = content.replace(/[^A-Z]/g, "").length;
+  document.getElementById("uppercaseCount").textContent = uppercaseCount;
+
+  const lowercaseCount = content.replace(/[^a-z]/g, "").length;
+  document.getElementById("lowercaseCount").textContent = lowercaseCount;
 }
 
 function countWords() {
@@ -52,4 +58,11 @@ function countWords() {
 
   const wordCount = content.split(/\s+/).length;
   document.getElementById("wordCount").textContent = wordCount;
+}
+
+function countLine() {
+  const content = document.querySelector("#content").innerText;
+
+  const lineCount = content.split("\n").length;
+  document.getElementById("lineCount").textContent = lineCount;
 }
