@@ -45,11 +45,14 @@
       <div
         id="content"
         contenteditable="true"
-        oninput="countCharacters(); countWords();"
+        oninput="countCharacters(); countWords(); countLine();"
       ></div>
       <div class="counting">
         <p>Số ký tự: <span id="charCount">0</span></p>
         <p>Số từ: <span id="wordCount">0</span></p>
+        <p>Số dòng: <span id="lineCount">0</span></p>
+        <p>Số chữ viết hoa: <span id="uppercaseCount">0</span></p>
+        <p>Số chữ viết thường: <span id="lowercaseCount">0</span></p>
       </div>
     </div>
     <script
