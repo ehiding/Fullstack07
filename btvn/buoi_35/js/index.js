@@ -56,7 +56,7 @@ function countCharacters() {
 function countWords() {
   const content = document.querySelector("#content").innerText;
 
-  const wordCount = content.split(/\s/).length - 1;
+  const wordCount = content.split(/\s+/g).length;
   document.getElementById("wordCount").textContent = wordCount;
 }
 
