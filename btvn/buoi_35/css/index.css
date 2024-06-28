@@ -40,12 +40,21 @@
   margin-left: 10px;
 }
 
-#content {
+.main {
   padding: 20px;
   box-shadow: 0 0 5px 0 rgb(0, 0, 0, 0.5);
   outline: none;
+  height: 100%;
   min-height: 300px;
   margin: 30px 0;
+}
+
+.main:hover {
+  cursor: text;
+}
+
+#content {
+  outline: none;
 }
 
 .counting {
