@@ -56,13 +56,21 @@ function countCharacters() {
 function countWords() {
   const content = document.querySelector("#content").innerText;
 
-  const wordCount = content.split(/\s+/).length;
+  const wordCount = content.split(/\s/).length - 1;
   document.getElementById("wordCount").textContent = wordCount;
 }
 
 function countLine() {
-  const content = document.querySelector("#content").innerText;
+  const content = document.getElementById("content");
 
-  const lineCount = content.split("\n").length;
-  document.getElementById("lineCount").textContent = lineCount;
+  const divHeight = content.offsetHeight;
+
+  const lineHeight = parseFloat(content.style.lineHeight);
+
+  const lines = divHeight / lineHeight;
+  document.getElementById("lineCount").textContent = lines;
+}
+
+function typing() {
+  document.getElementById("content").focus();
 }
