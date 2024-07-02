@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #03bdf0;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        background: #03bdf0;
+        color: #fff;
+        margin-top: 300px;
+        text-align: center;
+      }
+
+      h1 {
+        text-transform: uppercase;
+      }
+
+      .count {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background: #ff9100;
+        border-radius: 99%;
+        color: #fff;
+        font-size: 2rem;
+        margin: 0px auto;
+        padding: 15px;
+        width: 30px;
+        height: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .count-btn {
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 99px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 25px;
+      }
+
+      .count-btn:disabled {
+        background: #b6b6b6;
+        color: gray;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>get link</h1>
+
+      <span class="count"></span>
+
+      <button class="count-btn">Get Link</button>
+    </div>
+
+    <script>
+      const count = document.querySelector(".count");
+      const countBtn = document.querySelector(".count-btn");
+
+      const countTime = 10;
+      let time = new Date();
+      let startTime = time.getSeconds();
+      let endTime = startTime + countTime;
+
+      function getLink() {
+        let currentTime = new Date().getSeconds();
+        let remainTime = endTime - currentTime;
+
+        if (remainTime >= 0) {
+          count.innerHTML = `${remainTime}`;
+          if (remainTime == 0) {
+            countBtn.removeAttribute(`disabled`);
+          }
+        }
+
+        requestAnimationFrame(getLink);
+      }
+      countBtn.addEventListener("click", function () {
+        window.location.href = "https://fullstack.edu.vn/";
+      });
+      countBtn.setAttribute("disabled", ``);
+
+      getLink();
+      requestAnimationFrame(getLink);
+    </script>
+  </body>
+</html>
