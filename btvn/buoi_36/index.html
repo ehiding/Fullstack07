@@ -50,7 +50,7 @@
         padding: 10px 25px;
       }
 
-      .count-btn:disabled {
+      .container .count-btn:disabled {
         background: #b6b6b6;
         color: gray;
         cursor: not-allowed;
@@ -63,38 +63,40 @@
 
       <span class="count"></span>
 
-      <button class="count-btn">Get Link</button>
+      <button disabled class="count-btn">Get Link</button>
     </div>
 
     <script>
       const count = document.querySelector(".count");
       const countBtn = document.querySelector(".count-btn");
 
-      const countTime = 10;
-      let time = new Date();
-      let startTime = time.getSeconds();
-      let endTime = startTime + countTime;
+      let timeStart = 0;
+      let timeEnd = 10;
 
-      function getLink() {
-        let currentTime = new Date().getSeconds();
-        let remainTime = endTime - currentTime;
-
-        if (remainTime >= 0) {
-          count.innerHTML = `${remainTime}`;
-          if (remainTime == 0) {
-            countBtn.removeAttribute(`disabled`);
-          }
+      function getLink(start) {
+        if (timeStart <= start) {
+          timeEnd--;
+          count.innerText = timeEnd;
+          timeStart = start + 1000;
         }
 
-        requestAnimationFrame(getLink);
-      }
-      countBtn.addEventListener("click", function () {
-        window.location.href = "https://fullstack.edu.vn/";
-      });
-      countBtn.setAttribute("disabled", ``);
+        if (timeEnd === 0) {
+          countBtn.removeAttribute("disabled");
+          countBtn.addEventListener("click", function () {
+            {
+              window.location.href = "https://youtube.com";
+            }
+          });
+        }
 
-      getLink();
-      requestAnimationFrame(getLink);
+        if (timeEnd > 0) {
+          window.requestAnimationFrame(getLink);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        requestAnimationFrame(getLink);
+      });
     </script>
   </body>
 </html>
